@@ -7,21 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Navbar</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
 </head>
 <body>
 
   <nav>
     <ul>
         <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="about">About</a></li>
-        <li><a href="tests">Tests</a></li>
-        <li><a href="todos">Todos</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'tests' %}">Tests</a></li>
+        <li><a href="{% url 'todos' %}">Todos</a></li>
     </ul>
 </nav>
 
 <div class="content">
-    <h1>Welcome to our Website!</h1>
-    <p>This is a simple example of a navbar using HTML and CSS.</p>
+  <h1>Those are the tests using pytest:</h1>
+  <img src="{% static 'images/test.jpg' %}" alt="code for running tests">
 </div>
 
 </body>
